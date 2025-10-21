@@ -1,0 +1,382 @@
+/* SignUpPage 스타일 - LoginPage와 일관성 유지 */
+.signup-page {
+  min-height: calc(100vh - 120px);
+  background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+  padding: 40px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signup-container {
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
+}
+
+.signup-container h1 {
+  text-align: center;
+  color: #1565c0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+/* 회원가입 폼 스타일 */
+.signup-form {
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #1565c0;
+  margin-bottom: 8px;
+  font-size: 1rem;
+}
+
+.form-group label .required {
+  color: #c62828;
+  margin-left: 4px;
+}
+
+.form-group label .optional {
+  color: #999;
+  font-weight: 400;
+  font-size: 0.9rem;
+  margin-left: 4px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #69BDF9;
+  box-shadow: 0 0 0 3px rgba(105, 189, 249, 0.1);
+}
+
+.form-group input::placeholder {
+  color: #999;
+}
+
+.form-group input.error {
+  border-color: #c62828;
+}
+
+.form-group input.error:focus {
+  border-color: #c62828;
+  box-shadow: 0 0 0 3px rgba(198, 40, 40, 0.1);
+}
+
+/* 비밀번호 입력 래퍼 */
+.password-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-input-wrapper input {
+  padding-right: 50px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 12px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+  padding: 4px 8px;
+  transition: transform 0.2s ease;
+}
+
+.password-toggle:hover:not(:disabled) {
+  transform: scale(1.1);
+}
+
+.password-toggle:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* 필드별 에러 메시지 */
+.field-error {
+  color: #c62828;
+  font-size: 0.85rem;
+  margin-top: 6px;
+  padding-left: 4px;
+}
+
+/* 전체 에러 메시지 */
+.error-message {
+  background: #ffebee;
+  color: #c62828;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  border-left: 4px solid #c62828;
+}
+
+/* 버튼 그룹 */
+.signup-btn-box {
+  width: 100%;
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.signup-button,
+.cancel-button {
+  flex: 1;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.signup-button {
+  background: #69BDF9;
+  color: white;
+}
+
+.signup-button:hover:not(:disabled) {
+  background: #5ba3e0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(105, 189, 249, 0.3);
+}
+
+.signup-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.cancel-button {
+  background: white;
+  color: #69BDF9;
+  border: 2px solid #69BDF9;
+}
+
+.cancel-button:hover:not(:disabled) {
+  background: #f5f5f5;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(105, 189, 249, 0.2);
+}
+
+.cancel-button:disabled {
+  background: #f5f5f5;
+  color: #ccc;
+  border-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 하단 링크 */
+.signup-footer {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.signup-footer p {
+  color: #666;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: #69BDF9;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+  padding: 0;
+}
+
+.link-button:hover:not(:disabled) {
+  color: #5ba3e0;
+}
+
+.link-button:disabled {
+  color: #ccc;
+  cursor: not-allowed;
+  text-decoration: none;
+}
+
+/* 태블릿 반응형 (768px ~ 1023px) */
+@media (max-width: 1023px) {
+  .signup-page {
+    padding: 30px 15px;
+  }
+
+  .signup-container {
+    padding: 35px 25px;
+    max-width: 450px;
+  }
+
+  .signup-container h1 {
+    font-size: 2.2rem;
+  }
+
+  .form-group input {
+    padding: 11px 14px;
+    font-size: 0.95rem;
+  }
+
+  .signup-button,
+  .cancel-button {
+    height: 48px;
+    font-size: 1rem;
+  }
+}
+
+/* 모바일 반응형 (767px 이하) */
+@media (max-width: 767px) {
+  .signup-page {
+    padding: 20px 10px;
+    min-height: calc(100vh - 100px);
+  }
+
+  .signup-container {
+    padding: 30px 20px;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .signup-container h1 {
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .form-group label {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+  }
+
+  .form-group input {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .password-toggle {
+    font-size: 1rem;
+    right: 10px;
+  }
+
+  .signup-btn-box {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 25px;
+  }
+
+  .signup-button,
+  .cancel-button {
+    width: 100%;
+    height: 46px;
+    font-size: 0.95rem;
+  }
+
+  .signup-footer {
+    padding-top: 15px;
+  }
+
+  .signup-footer p {
+    font-size: 0.9rem;
+  }
+
+  .link-button {
+    font-size: 0.9rem;
+  }
+
+  .field-error {
+    font-size: 0.8rem;
+  }
+
+  .error-message {
+    font-size: 0.85rem;
+    padding: 10px 14px;
+  }
+}
+
+/* 작은 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .signup-container {
+    padding: 25px 15px;
+  }
+
+  .signup-container h1 {
+    font-size: 1.6rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+  }
+
+  .form-group input {
+    padding: 9px 11px;
+    font-size: 0.85rem;
+  }
+
+  .signup-button,
+  .cancel-button {
+    height: 44px;
+    font-size: 0.9rem;
+    padding: 12px 16px;
+  }
+}
+
+/* 접근성 개선 */
+@media (prefers-reduced-motion: reduce) {
+  .signup-button,
+  .cancel-button,
+  .password-toggle,
+  .form-group input {
+    transition: none;
+  }
+
+  .signup-button:hover:not(:disabled),
+  .cancel-button:hover:not(:disabled) {
+    transform: none;
+  }
+}
+
+/* 포커스 가시성 개선 (키보드 네비게이션) */
+.signup-button:focus-visible,
+.cancel-button:focus-visible,
+.link-button:focus-visible,
+.password-toggle:focus-visible {
+  outline: 3px solid #69BDF9;
+  outline-offset: 2px;
+}

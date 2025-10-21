@@ -1,0 +1,17 @@
+/**
+ * 전역 CSS 리셋 및 기본 스타일 정의
+ * - 모든 요소의 box-sizing, margin, padding 초기화
+ * - 리스트 및 링크 스타일 리셋
+ */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    color: #222;
+}

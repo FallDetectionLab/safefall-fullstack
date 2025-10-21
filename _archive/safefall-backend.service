@@ -1,0 +1,35 @@
+[Unit]
+Description=SafeFall Backend Service
+After=network.target
+
+[Service]
+Type=simple
+User=www-data
+Group=www-data
+WorkingDirectory=/opt/safefallFullstack-main/Back
+Environment="PATH=/opt/safefallFullstack-main/Back/venv/bin"
+Environment="FLASK_ENV=production"
+
+# 환경 변수 파일 로드
+EnvironmentFile=/opt/safefallFullstack-main/Back/.env
+
+# Gunicorn 실행
+ExecStart=/opt/safefallFullstack-main/Back/venv/bin/gunicorn \
+    --workers 4 \
+    --bind 0.0.0.0:5000 \
+    --timeout 120 \
+    --access-logfile /var/log/safefall/access.log \
+    --error-logfile /var/log/safefall/error.log \
+    --log-level info \
+    app:app
+
+# 재시작 정책
+Restart=always
+RestartSec=10
+
+# 리소스 제한
+LimitNOFILE=65536
+MemoryLimit=2G
+
+[Install]
+WantedBy=multi-user.target

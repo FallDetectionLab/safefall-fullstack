@@ -1,0 +1,20 @@
+#!/bin/bash
+
+echo "🔍 JWT 토큰 문제 진단 스크립트"
+echo "=================================="
+echo ""
+
+echo "📌 브라우저 개발자 도구에서 다음을 실행하세요:"
+echo ""
+echo "// 1. localStorage에 토큰이 있는지 확인"
+echo "localStorage.getItem('access_token')"
+echo ""
+echo "// 2. 토큰 내용 확인 (있다면)"
+echo "console.log('Token:', localStorage.getItem('access_token')?.substring(0, 50) + '...')"
+echo ""
+echo "// 3. 토큰 완전히 확인"
+echo "console.log('Full token:', localStorage.getItem('access_token'))"
+echo ""
+echo "=================================="
+echo ""
+echo "📝 결과를 알려주세요!"

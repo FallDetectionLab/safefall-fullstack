@@ -1,0 +1,121 @@
+# 환경 변수 파일
+.env
+.env.local
+.env.production
+.env.*.local
+*.env
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+env/
+ENV/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Flask
+instance/
+.webassets-cache
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+*.log
+logs/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# React Build
+dist/
+dist-ssr/
+*.local
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Videos & Images
+videos/
+*.mp4
+*.avi
+*.mov
+*.mkv
+uploads/
+
+# Backups
+backup/
+*.backup
+*.bak
+
+# SSL Certificates
+*.pem
+*.key
+*.crt
+
+# Temporary files
+*.tmp
+.cache/
+temp/
+
+# OS files
+Thumbs.db
+.DS_Store
+.directory
+*.lnk
+
+# Coverage & Testing
+.coverage
+.pytest_cache/
+htmlcov/
+.tox/
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Static files (generated)
+staticfiles/
+media/
+
+# Docker
+.dockerignore
+docker-compose.override.yml
+
+# Deployment
+*.pid
+*.sock
+*.service.backup
