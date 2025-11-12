@@ -5,9 +5,11 @@
     width: 100%;
     display: flex;
     gap: 60px;
-    margin-top: 60px;
+    margin-top: 30px;
 }
 .realtimevideoBox {
+    margin: 0 auto;
+    max-width: 1000px;
     width: 100%;
     height: 56.25vw;
     max-height: 810px;
@@ -43,6 +45,9 @@
 
 
 @media screen and (min-width: 1200px) {
+    .realtimevideoBox{
+        margin-bottom: -80px;
+    }
     .AfterLoginWindowDesktop {
         max-width: 1440px;
         min-width: 1200px;

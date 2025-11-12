@@ -25,7 +25,7 @@ import "./AfterLogin.css";
 const BACKEND_BASE = import.meta.env.VITE_BACKEND_URL || 'http://43.203.245.90:8000';
 
 // ⭐ 라즈베리파이 스트리밍 URL
-const RASPBERRY_PI_STREAM_URL = 'http://192.168.0.95:5001/video_feed';
+const RASPBERRY_PI_STREAM_URL = 'http://192.168.102.67:5001/video_feed';
 
 const AfterLogin = ({ 
   incidentVideos: incidentVideosProp,
