@@ -12,6 +12,11 @@ numpy==1.26.4
 opencv-python==4.9.0.80
 # ffmpeg-python==0.2.0  # 필요시 주석 해제
 
+# YOLO11 Fall Detection
+ultralytics>=8.0.0
+torch>=2.0.0
+torchvision>=0.15.0
+
 # Database
 SQLAlchemy==2.0.25
 

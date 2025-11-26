@@ -22,10 +22,10 @@ import VideoBtnSmall from "../components/SVG-VideoBtnSmall";  // 🔥 VideoBtnSm
 import "./AfterLogin.css";
 
 // 백엔드 URL 환경변수 설정
-const BACKEND_BASE = import.meta.env.VITE_BACKEND_URL || 'http://43.203.245.90:8000';
+const BACKEND_BASE = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5001';
 
-// ⭐ 라즈베리파이 스트리밍 URL
-const RASPBERRY_PI_STREAM_URL = 'http://192.168.102.67:5001/video_feed';
+// ⭐ 백엔드에서 YOLO 처리된 스트림 URL
+const RASPBERRY_PI_STREAM_URL = `${BACKEND_BASE}/api/stream/mjpeg`;
 
 const AfterLogin = ({ 
   incidentVideos: incidentVideosProp,

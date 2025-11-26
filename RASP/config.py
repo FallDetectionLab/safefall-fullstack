@@ -38,7 +38,7 @@ class Config:
     BASE_DIR = Path(__file__).resolve().parent
 
     # Backend server
-    BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:5000")
+    BACKEND_URL = os.getenv("BACKEND_URL", "http://10.214.85.236:5001")
     DEVICE_ID = os.getenv("DEVICE_ID", "pi-01")
 
     # YOLO model

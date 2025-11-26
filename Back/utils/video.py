@@ -117,6 +117,9 @@ def convert_to_web_compatible(input_path, output_path):
         bool: 성공 여부
     """
     try:
+        # ffmpeg 경로 설정 (Windows: C:/ffmpeg/bin/ffmpeg.exe, Linux/Mac: ffmpeg)
+        ffmpeg_path = 'C:/ffmpeg/bin/ffmpeg.exe' if os.name == 'nt' and os.path.exists('C:/ffmpeg/bin/ffmpeg.exe') else 'ffmpeg'
+
         # ffmpeg 명령어
         # -c:v libx264: H.264 비디오 코덱
         # -preset fast: 빠른 인코딩
@@ -124,7 +127,7 @@ def convert_to_web_compatible(input_path, output_path):
         # -movflags +faststart: 웹 스트리밍 최적화 (moov atom을 파일 앞쪽으로)
         # -pix_fmt yuv420p: 브라우저 호환성을 위한 픽셀 포맷
         cmd = [
-            'ffmpeg',
+            ffmpeg_path,
             '-i', input_path,
             '-c:v', 'libx264',
             '-preset', 'fast',

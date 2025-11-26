@@ -41,6 +41,11 @@ class Config:
     HLS_SEGMENT_DURATION = 2  # 초
     BUFFER_DURATION = 30  # 사고 전후 저장할 시간 (초) - 15초 → 30초
     INCIDENT_VIDEO_DURATION = 30  # 총 저장 영상 길이 (초)
+
+    # YOLO11 Fall Detection 설정 (커스텀 학습 모델)
+    YOLO_MODEL_PATH = os.environ.get('YOLO_MODEL_PATH', os.path.join(BASE_DIR, 'models', 'yolo11n-pose.pt'))  # 🔥 커스텀 학습 모델
+    CONFIDENCE_THRESHOLD = float(os.environ.get('CONFIDENCE_THRESHOLD', '0.5'))  # 낙상 판단 신뢰도 (0.3 = 더 민감하게 감지)
+    ASPECT_RATIO_THRESHOLD = float(os.environ.get('ASPECT_RATIO_THRESHOLD', '1.5'))  # 가로/세로 비율 (1.3 = 비스듬히 누운 자세도 감지)
     
     # CORS 설정
     CORS_ORIGINS = os.environ.get('CORS_ORIGINS', 'http://localhost:5173,http://localhost:5174,http://safefall2.s3-website.ap-northeast-2.amazonaws.com').split(',')
@@ -55,6 +60,7 @@ class Config:
         os.makedirs(Config.INSTANCE_DIR, exist_ok=True)  # instance 디렉토리 생성
         os.makedirs(Config.VIDEOS_DIR, exist_ok=True)
         os.makedirs(Config.HLS_DIR, exist_ok=True)
+        os.makedirs(os.path.join(Config.BASE_DIR, 'models'), exist_ok=True)  # YOLO 모델 디렉토리
 
 
 class DevelopmentConfig(Config):

@@ -11,8 +11,8 @@ import axios from 'axios';
 
 // Backend URL configuration - uses environment variable with fallback
 // For Vite projects, use VITE_BACKEND_URL environment variable
-// Fallback to Raspberry Pi backend address
-const BASE_URL = import.meta.env.VITE_BACKEND_URL || 'http://43.203.245.90:8000';
+// Fallback to backend server address
+const BASE_URL = import.meta.env.VITE_BACKEND_URL || 'http://10.214.85.236:5001';
 
 // 🔥 CRITICAL FIX: 페이지 로드 시 localStorage에서 토큰 자동 복원
 let authToken = null;
